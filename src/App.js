@@ -1,10 +1,14 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import Wrapper from "./components/layout/Wrapper";
-import AppHeader from "./components/layout/AppHeader/AppHeader";
-import AppRoutes from "./routes";
+import AppRoutes from './routes';
+
+import AppHeader from './components/layout/AppHeader/AppHeader';
+
+import Wrapper from './components/layout/Wrapper';
+
+import background from './public/images/background-1.jpg';
 
 class App extends Component {
   static propTypes = {
@@ -15,26 +19,26 @@ class App extends Component {
 
   constructor(props){
     super(props);
-    
+
     this.style = {
-      ws: {
-        height: "100vh"
-      },
       bs: {
-        "background-image": "url(images/background-1.jpg)",
+        "background-image": "url(" + background + ")",
         "background-size": "cover",
         opacity: 0.5
+      },
+      ws: {
+        height: "100vh"
       }
-    };
+    }
   }
 
   render() {
     return (
       <MuiThemeProvider>
-        <Wrapper className="app" ws={this.style.ws} bs={this.style.bs}>
-          <AppHeader logged={this.props.store.logged} />
+        <Wrapper className="app" bs={this.style.bs} ws={this.style.ws}>
+          <AppHeader logged={this.props.store.logged}/>
           <AppRoutes />
-        </Wrapper>  
+        </Wrapper>
       </MuiThemeProvider>
     );
   }

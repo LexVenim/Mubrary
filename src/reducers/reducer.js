@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
-import artists from "./artists";
-import albums from "./albums";
+import artists from './artistsReducer';
+import albums from './albumsReducer';
 
 const reducer = combineReducers({
   artists,

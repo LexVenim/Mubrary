@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Wrapper extends Component {
   static propTypes = {
@@ -15,24 +15,25 @@ class Wrapper extends Component {
 
     this.className = this.props.className || "";
     this.style = {
-      wrapper: this.props.ws || {},
       background: this.props.bs || {},
-      content: this.props.cs || {}
-    };
+      content: this.props.cs || {},
+      wrapper: this.props.ws || {}
+    }
   }
 
   render() {
     return (
       <div className={this.className + "-wrapper"} style={this.style.wrapper}>
-        <div className={this.className + "-background"} style={this.style.background}></div>
+        <div className={this.className + "-background"} style={this.style.background}/>
         <div className={this.className + "-content"} style={this.style.content}>
           {this.props.children}
         </div>
-      
+
         <style jsx global>{`
           div[class*="-wrapper"] {
             position: relative;
           }
+
           div[class*="-wrapper"] > div {
             position: absolute;
             top: 0;

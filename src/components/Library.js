@@ -1,27 +1,12 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-
-
-class Greeting extends Component {
-  static defaultProps = {
-    name: "stranger"
-  }
-
-  render() {
-    return (
-      <div>Hello in library, {this.props.name}</div>
-    );
-  }
-}
-
-Greeting.propTypes = {
-  name: PropTypes.string.isRequired
-};
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Library extends Component {
   render() {
     return (
-      <Greeting />
+      <div>
+        Hello in Library!
+      </div>
     );
   }
 }

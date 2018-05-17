@@ -1,16 +1,21 @@
 @font-face {
   font-family: Gagalin;
-  src: url(fonts/Gagalin-Regular.ttf); }
+  src: url("../public/fonts/Gagalin-Regular.ttf");
+}
 
 body {
-  margin: 0; }
+  margin: 0;
+  padding: 0;
+}
 
 .center-flex {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .right-flex {
   display: flex;
   justify-content: flex-end;
-  align-items: center; }
+  align-items: center;
+}

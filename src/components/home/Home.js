@@ -1,34 +1,37 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import Wrapper from "../layout/Wrapper";
-import HomeStepper from "./HomeStepper";
+import Wrapper from '../layout/Wrapper';
+
+import HomeStepper from './HomeStepper';
+
+import { grey300 } from 'material-ui/styles/colors';
 
 class Home extends Component {
   constructor(props){
     super(props);
-    
+
     this.style = {
-      ws: {
-        height: "calc(92vh - 64px)",
-        margin: "4vh 3vw"
-      },
       bs: {
-        "background-color": "ghostwhite",
+        "background-color": grey300,
         "border-radius": "15px",
         opacity: 0.5
       },
       cs: {
         "border-radius": "15px"
+      },
+      ws: {
+        height: "calc(92vh - 64px)",
+        margin: "4vh 3vw"
       }
-    };
+    }
   }
 
   render() {
     return (
-      <Wrapper className="home" ws={this.style.ws} bs={this.style.bs} cs={this.style.cs}>
+      <Wrapper className="home" bs={this.style.bs} cs={this.style.cs} ws={this.style.ws}>
         <HomeStepper />
-      </Wrapper> 
+      </Wrapper>
     );
   }
 }

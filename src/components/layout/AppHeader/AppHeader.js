@@ -1,13 +1,14 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import AppBar from "material-ui/AppBar";
-import IconButton from "material-ui/IconButton";
-import LibraryMusic from "material-ui/svg-icons/av/library-music";
-import {indigo600} from "material-ui/styles/colors";
+import AppBar from 'material-ui/AppBar';
+import IconButton from 'material-ui/IconButton';
+import LibraryMusic from 'material-ui/svg-icons/av/library-music';
 
-import Logged from "./Logged";
-import Login from "./Login";
+import Logged from './Logged';
+import Login from './Login';
+
+import { indigo600 } from 'material-ui/styles/colors';
 
 class AppHeader extends Component {
   static propTypes = {
@@ -20,7 +21,7 @@ class AppHeader extends Component {
         className="app-header"
         title="Mubrary"
         iconElementLeft={<IconButton><LibraryMusic /></IconButton>}
-        iconElementRight={this.props.logged ? <Logged /> : <Login />}
+        iconElementRight={this.props.logged ? <Logged/> : <Login/>}
         style={{
           "font-family": "Gagalin",
           "background-color": indigo600,
