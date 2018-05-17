@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
-import Home from "./components/Home";
+import Home from "./components/home/Home";
 import Auth from "./components/Auth";
 import Library from "./components/Library";
 import SConnect from "./components/social/SConnect";

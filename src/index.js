@@ -1,12 +1,12 @@
-import React from "react";
+import React, {Component} from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
 
-import AppRoutes from "./routes";
+import App from "./App";
 import store from "./store";
 
 render(
   <Provider store={store}>
-    <AppRoutes />
+    <App store={store} />
   </Provider>, document.getElementById("root")
 );

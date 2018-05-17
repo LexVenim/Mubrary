@@ -27,6 +27,10 @@ module.exports = {
           presets: ["react", "stage-0", "es2015"],
           plugins: ["transform-class-properties", "transform-decorators-legacy"]
         }
+      },
+      {
+        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader?name=fonts/[name].[ext]'
       }
     ]
   },
